@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Race Time Synthetic Optimizer",
+    "description": [
+      "Cross-seeding optimization-based synthetic optimizer algorithm using C++ and Python to improve race times for World Solar Challenge racing."
+    ],
+    "image": "projects/Aevum_StadiumTurf.jpeg",
+    "tools": ["C++", "Python", "CMake"],
+    "url": ""
+  },
+  {
+    "title": "Flappy Bird AI",
+    "description": "Flappy Bird game built from scratch using Python and Pygame, implementing a neural network to play the game.",
+    "image": "projects/flappy_demo.gif",
+    "tools": ["Python", "Pygame", "Pandas", "Pytorch"],
+    "url": "https://github.com/arya-gowda/ai-flappy"
+  },
+  {
+    "title": "Movie Recommendation System",
+    "description": "Sentiment classification pipeline using SVMs on Amazon Prime Video reviews, involving custom feature extraction, hyperparameter tuning with cross-validation, and engineering a high-performing multiclass classifier.",
+    "image": "projects/Prime_Video.webp",
+    "tools": ["Python", "Scikit-learn", "Numpy"],
+    "url": ""
+  }
+]

@@ -1,0 +1,46 @@
+[
+    {
+        "date": "Jun 2025 - Present",
+        "location": "Remote",
+        "role": "Full Stack Developer",
+        "company": "Sabana",
+        "description": [],
+        "tools": ["ReactJS", "TypeScript", "AWS S3", "PostgreSQL", "Python"]
+    },
+    {
+        "date": "Apr 2024 - Dec 2024",
+        "location": "Ann Arbor, MI",
+        "role": "VP of Professional Development",
+        "company": "Sigma Eta Pi — University of Michigan",
+        "description": [
+            "Organized and facilitated professional trek for group 15 students to learn from entrepreneurship focused companies in the Boston area.",
+            "Oversaw team of 12 members to enact innovative new cross-campus initiatives to increase professional development and entrepreneurship opportunities for students.",
+            "Instituted professional literacy workshops and resources for organization of 100 active members."
+        ],
+        "tools": []
+    },
+    {
+        "date": "May 2024 - Aug 2024",
+        "location": "Detroit, MI",
+        "role": "Software Engineering Intern",
+        "company": "Ally Financial",
+        "description": [
+            "Coordinated cross-division design thinking sessions to understand client and developer challenges and obstacles.",
+            "Designed Ally Reliability Engineering (ARE) Intake Portal with Figma while utilizing executive feedback.",
+            "Built ARE Portal through React.js and integrating Amazon Kendra confluence search and Jira REST API to reduce ticket turnover time by over 50% and increase client self-service rates by 80%."
+        ],
+        "tools": ["ReactJS", "Jira REST API", "CI/CD", "Design Thinking"]
+    },
+    {
+        "date": "May 2023 - Aug 2023",
+        "location": "Novi, MI",
+        "role": "Software Engineering Intern",
+        "company": "Danlaw Inc.",
+        "description": [
+            "Designed and developed IoT platform for lot management of car dealerships with inventory ranging to 500 cars using Figma as part of the R&D team.",
+            "Developed application to monitor inventory status and flow with B2B interface for 3 nearby car dealerships using AngularJS for user interface and Java for backend and data management",
+            "Collaborated in a fast-paced, AGILE environment using Jira and Confluence for project coordination and delivery."
+        ],
+        "tools": ["AngularJS", "Java", "AGILE"]
+    }
+]
