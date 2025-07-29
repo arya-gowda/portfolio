@@ -16,6 +16,13 @@
     "url": "https://github.com/arya-gowda/ai-flappy"
   },
   {
+    "title": "Portfolio Website",
+    "description": "This site lol",
+    "image": "projects/Portfolio.png",
+    "tools": ["ReactJS", "Tailwind CSS", "Vite"],
+    "url": "https://github.com/arya-gowda/portfolio"
+  },
+  {
     "title": "Movie Recommendation System",
     "description": "Sentiment classification pipeline using SVMs on Amazon Prime Video reviews, involving custom feature extraction, hyperparameter tuning with cross-validation, and engineering a high-performing multiclass classifier.",
     "image": "projects/Prime_Video.webp",

@@ -10,7 +10,7 @@ export default function Home() {
       <div className="containter mx-auto flex justify-between mt-20 mb-30 h-80 items-center">
         <div className='mt-20 items-center'>
           <div className="text-8xl font-extrabold">
-            <p>Hello, I'm</p>
+            <p>Hi, I'm</p>
             <p className="text-violet-400">Arya Gowda</p>
           </div>
           <p className="text-xl mt-4 text-zinc-400 font-bold">Full Stack developer &#128104;&#8205;&#128187; | AI/ML enthusiast &#129504; | Driven by innovation and coding the future &#128640;&#128161;</p>
@@ -28,8 +28,10 @@ export default function Home() {
         </div>
       </div>
       <div className="p-4 max-w-3xl mx-auto">
-        <h2 className="text-4xl text-center font-bold mb-4 mx-auto">About Me</h2>
-        <p className="text-zinc-300 text-xl">I'm a creative developer and photographer passionate about visual storytelling and technology.</p>
+        <h2 className="text-4xl text-center font-bold mb-4 mx-auto">👋 About Me</h2>
+        <p className="text-zinc-300 text-xl">
+          I'm a senior at the University of Michigan studying Computer Science and Business with a passion for AI/ML, product-building, and creative problem-solving. I love turning ideas into real, impactful projects—especially at the intersection of technology, design, and innovation. Driven by curiosity and a builder's mindset, I'm always exploring new tools, startups, and ways to make tech more human.
+        </p>
       </div>
       <div className="p-4 max-w-5xl mx-auto mt-20 text-center">
         <h2 className="text-4xl font-bold mb-4 mx-auto">Tech Stack</h2>
