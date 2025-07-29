@@ -22,7 +22,7 @@ export default function Photography() {
   const photos = Object.values(images);
 
   const showPrev = () => setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
-  const showNext = () => setSelectedIndex((prev) => (prev < photos.length - 1 ? prev + 1 : prev));
+  const showNext = () => setSelectedIndex((prev) => (prev + 1));
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
