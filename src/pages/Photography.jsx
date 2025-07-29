@@ -13,8 +13,6 @@ export default function Photography() {
 
   const openModal = (index) => setSelectedIndex(index);
   const closeModal = () => setSelectedIndex(null);
-  const showPrev = () => setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
-  const showNext = () => setSelectedIndex((prev) => (prev < images.length - 1 ? prev + 1 : prev));
 
 
   const images = import.meta.glob('../assets/images/*.jpg', {
@@ -22,6 +20,9 @@ export default function Photography() {
     import: 'default',
   });
   const photos = Object.values(images);
+  
+  const showPrev = () => setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
+  const showNext = () => setSelectedIndex((prev) => (prev < images.length - 1 ? prev + 1 : prev));
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
