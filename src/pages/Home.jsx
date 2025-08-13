@@ -18,7 +18,10 @@ export default function Home() {
             <button className="bg-violet-400 text-white px-5 py-2 rounded-3xl shadow hover:bg-violet-500 transition duration-300">
               <Link to="/projects">Portfolio</Link>
             </button>
-            <button className='bg-zinc-900 text-white border-2 px-5 py-2 rounded-3xl shadow hover:bg-zinc-800 transition duration-300'>
+            <button 
+              onClick={() => window.open("/Arya_Gowda_Resume.pdf", "_blank", "noopener,noreferrer")}
+              className='bg-zinc-900 text-white border-2 px-5 py-2 rounded-3xl shadow hover:bg-zinc-800 transition duration-300'
+            >
               Resume
             </button>
           </div>
