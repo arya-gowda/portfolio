@@ -7,18 +7,18 @@ import { FaJava } from 'react-icons/fa';
 export default function Home() {
   return (
     <div className='max-w-7xl mx-auto px-4'>
-      <div className="containter mx-auto flex justify-between mt-20 mb-30 h-80 items-center">
-        <div className='mt-20 items-center'>
-          <div className="text-8xl font-extrabold">
+      <div className="container mx-auto flex flex-col-reverse md:flex-row justify-between mt-10 md:mt-20 mb-16 md:mb-30 items-center gap-8 text-center md:text-left">
+        <div>
+          <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold">
             <p>Hi, I'm</p>
             <p className="text-violet-400">Arya Gowda</p>
           </div>
-          <p className="text-xl mt-4 text-zinc-400 font-bold">Full Stack developer &#128104;&#8205;&#128187; | AI/ML enthusiast &#129504; | Driven by innovation and coding the future &#128640;&#128161;</p>
-          <div className='flex gap-4 mt-4'>
+          <p className="text-lg sm:text-xl mt-4 text-zinc-400 font-bold">Full Stack developer &#128104;&#8205;&#128187; | AI/ML enthusiast &#129504; | Driven by innovation and coding the future &#128640;&#128161;</p>
+          <div className='flex justify-center md:justify-start gap-4 mt-4'>
             <button className="bg-violet-400 text-white px-5 py-2 rounded-3xl shadow hover:bg-violet-500 transition duration-300">
               <Link to="/projects">Portfolio</Link>
             </button>
-            <button 
+            <button
               onClick={() => window.open("/Arya_Gowda_Resume.pdf", "_blank", "noopener,noreferrer")}
               className='bg-zinc-900 text-white border-2 px-5 py-2 rounded-3xl shadow hover:bg-zinc-800 transition duration-300'
             >
@@ -26,8 +26,8 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div>
-          <img src={Headshot} alt="Profile" className="rounded-full w-80 h-80 shadow-lg" />
+        <div className="shrink-0">
+          <img src={Headshot} alt="Profile" className="rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 shadow-lg" />
         </div>
       </div>
       <div className="p-4 max-w-3xl mx-auto">
