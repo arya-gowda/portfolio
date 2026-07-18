@@ -1,15 +1,31 @@
 import { useEffect, useState } from 'react';
 import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion';
+import { LoadingState, ErrorState } from '../components/LoadingState';
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch("/data/projects.json")
-      .then((res) => res.json())
-      .then((data) => setProjects(data));
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        setProjects(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) return <LoadingState label="Loading projects..." />;
+  if (error) return <ErrorState message={`Error loading projects: ${error}`} />;
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-6">

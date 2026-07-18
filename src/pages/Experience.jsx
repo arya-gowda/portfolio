@@ -1,6 +1,7 @@
 import { CiCalendar, CiLocationOn } from "react-icons/ci"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
+import { LoadingState, ErrorState } from "../components/LoadingState"
 
 const education = [
   {
@@ -36,8 +37,8 @@ export default function Experience() {
       });
   }, []);
 
-  if (loading) return <div>Loading experiences...</div>;
-  if (error) return <div>Error loading experiences: {error}</div>;
+  if (loading) return <LoadingState label="Loading experiences..." />;
+  if (error) return <ErrorState message={`Error loading experiences: ${error}`} />;
 
   return (
     <section id="experience" className="min-h-screen px-6 py-12">
