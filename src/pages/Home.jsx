@@ -36,7 +36,7 @@ export default function Home() {
       <section aria-labelledby="about-heading" className="p-4 max-w-3xl mx-auto">
         <h2 id="about-heading" className="text-4xl text-center font-bold mb-4 mx-auto">👋 About Me</h2>
         <p className="text-zinc-700 dark:text-zinc-300 text-xl">
-          I'm a senior at the University of Michigan studying Computer Science and Business with a passion for AI/ML, product-building, and creative problem-solving. I love turning ideas into real, impactful projects—especially at the intersection of technology, design, and innovation. Driven by curiosity and a builder's mindset, I'm always exploring new tools, startups, and ways to make tech more human.
+          I'm a Software Engineer at Ally and a recent graduate of the University of Michigan, where I studied Computer Science and Business. I have a passion for AI/ML, product-building, and creative problem-solving, and I love turning ideas into real, impactful projects—especially at the intersection of technology, design, and innovation. Driven by curiosity and a builder's mindset, I'm always exploring new tools, startups, and ways to make tech more human.
         </p>
       </section>
       <section aria-labelledby="techstack-heading" className="p-4 max-w-5xl mx-auto mt-20 text-center">

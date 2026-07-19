@@ -1,11 +1,23 @@
 [
     {
-        "date": "Jun 2025 - Present",
+        "date": "Jul 2026 - Present",
+        "location": "Charlotte, North Carolina, United States · Hybrid",
+        "role": "Software Engineer",
+        "company": "Ally",
+        "description": [],
+        "tools": []
+    },
+    {
+        "date": "Jun 2025 - Aug 2025",
         "location": "Remote",
         "role": "Full Stack Developer",
-        "company": "Sabana",
-        "description": [],
-        "tools": ["ReactJS", "TypeScript", "AWS S3", "PostgreSQL", "Python"]
+        "company": "Sabana (Techstars '24)",
+        "description": [
+            "Designed and developed application using TypeScript for frontend and Python for backend APIs by utilizing FastAPI and Postgres database to ensure efficient data storage and retrieval.",
+            "Integrated AWS S3 using AWS SDK to enable secure PDF storage and retrieval, with seamless upload and view functionality directly from the user interface.",
+            "Optimized end-to-end workflows to improve application performance, scalability, and reliability."
+        ],
+        "tools": ["TypeScript", "Python", "FastAPI", "AWS S3", "PostgreSQL"]
     },
     {
         "date": "Apr 2024 - Dec 2024",
