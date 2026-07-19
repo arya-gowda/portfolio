@@ -1,29 +1,47 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: var(--color-zinc-100, #e0e0e0);
+  color-scheme: light;
   accent-color: var(--color-violet-400, #646cff);
-  background-color: var(--color-zinc-900, #111111);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-zinc-50, #fafafa);
+  color: var(--color-zinc-900, #18181b);
+}
+
+.dark body {
+  background-color: var(--color-zinc-900, #111111);
+  color: var(--color-zinc-100, #e0e0e0);
+}
+
 .techstackbutton {
   display: flex;
-  border-color: var(--color-violet-400, #646cff);
+  border-color: var(--color-violet-500, #7c3aed);
   border-width: 2px;
-  color: var(--color-violet-200, #b0b0ff);
+  color: var(--color-violet-700, #6d28d9);
   padding-inline: calc(var(--spacing) * 4) /* 1rem = 16px */;
   padding-block: calc(var(--spacing) * 2) /* 0.5rem = 8px */;
   border-radius: calc(infinity * 1px);
   gap: calc(var(--spacing) * 2) /* 0.5rem = 8px */;
+}
+.dark .techstackbutton {
+  border-color: var(--color-violet-400, #646cff);
+  color: var(--color-violet-200, #b0b0ff);
 }
 
 .navlink {
@@ -33,14 +51,20 @@
   font-size: 1em;
   font-weight: bold;
   font-family: inherit;
-  color: var(--color-zinc-300, #b0b0b0);
+  color: var(--color-zinc-600, #52525b);
   text-decoration: none;
   transition: background-color 0.25s, color 0.25s;
 }
+.dark .navlink {
+  color: var(--color-zinc-300, #b0b0b0);
+}
 .navlink:hover {
-  background-color: var(--color-violet-400, #646cff);
+  background-color: var(--color-violet-500, #7c3aed);
   color: var(--color-zinc-100, #e0e0e0);
   border: 0;
+}
+.dark .navlink:hover {
+  background-color: var(--color-violet-400, #646cff);
 }
 .navicon {
   margin-right: 0.1em;
@@ -52,6 +76,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 h1 {

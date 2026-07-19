@@ -6,7 +6,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AG Portfolio</title>
+    <title>Arya Gowda | Portfolio</title>
+    <script>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        var theme = stored === 'light' || stored === 'dark'
+          ? stored
+          : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      })();
+    </script>
     <meta name="description" content="Arya Gowda's portfolio — full stack developer and AI/ML enthusiast. Explore projects, experience, and photography." />
     <link rel="canonical" href="https://arya-gowda.vercel.app/" />
 

@@ -3,24 +3,27 @@ import Headshot from '../assets/Gowda_Arya_Headshot.jpg';
 import { SiJavascript, SiPython, SiReact, SiAdobelightroom, SiTypescript, SiHtml5, SiCss3, SiC, SiCplusplus, SiPytorch, SiPandas, SiFlask, SiAngular, SiGit, SiFigma, SiJira, SiTailwindcss, SiVite, SiPostgresql } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 import { FaJava } from 'react-icons/fa';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export default function Home() {
+  useDocumentTitle('Home');
+
   return (
     <div className='max-w-7xl mx-auto px-4'>
-      <div className="container mx-auto flex flex-col-reverse md:flex-row justify-between mt-10 md:mt-20 mb-16 md:mb-30 items-center gap-8 text-center md:text-left">
+      <section aria-label="Introduction" className="container mx-auto flex flex-col-reverse md:flex-row justify-between mt-10 md:mt-20 mb-16 md:mb-30 items-center gap-8 text-center md:text-left">
         <div>
-          <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold">
-            <p>Hi, I'm</p>
-            <p className="text-violet-400">Arya Gowda</p>
-          </div>
-          <p className="text-lg sm:text-xl mt-4 text-zinc-400 font-bold">Full Stack developer &#128104;&#8205;&#128187; | AI/ML enthusiast &#129504; | Driven by innovation and coding the future &#128640;&#128161;</p>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold">
+            <span className="block">Hi, I'm</span>
+            <span className="block text-violet-600 dark:text-violet-400">Arya Gowda</span>
+          </h1>
+          <p className="text-lg sm:text-xl mt-4 text-zinc-600 dark:text-zinc-400 font-bold">Full Stack developer &#128104;&#8205;&#128187; | AI/ML enthusiast &#129504; | Driven by innovation and coding the future &#128640;&#128161;</p>
           <div className='flex justify-center md:justify-start gap-4 mt-4'>
-            <button className="bg-violet-400 text-white px-5 py-2 rounded-3xl shadow hover:bg-violet-500 transition duration-300">
+            <button className="bg-violet-500 dark:bg-violet-400 text-white px-5 py-2 rounded-3xl shadow hover:bg-violet-600 dark:hover:bg-violet-500 transition duration-300">
               <Link to="/projects">Portfolio</Link>
             </button>
             <button
               onClick={() => window.open("/Arya_Gowda_Resume.pdf", "_blank", "noopener,noreferrer")}
-              className='bg-zinc-900 text-white border-2 px-5 py-2 rounded-3xl shadow hover:bg-zinc-800 transition duration-300'
+              className='bg-white text-zinc-900 border-zinc-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700 border-2 px-5 py-2 rounded-3xl shadow hover:bg-zinc-100 dark:hover:bg-zinc-800 transition duration-300'
             >
               Resume
             </button>
@@ -29,16 +32,16 @@ export default function Home() {
         <div className="shrink-0">
           <img src={Headshot} alt="Profile" className="rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 shadow-lg" />
         </div>
-      </div>
-      <div className="p-4 max-w-3xl mx-auto">
-        <h2 className="text-4xl text-center font-bold mb-4 mx-auto">👋 About Me</h2>
-        <p className="text-zinc-300 text-xl">
+      </section>
+      <section aria-labelledby="about-heading" className="p-4 max-w-3xl mx-auto">
+        <h2 id="about-heading" className="text-4xl text-center font-bold mb-4 mx-auto">👋 About Me</h2>
+        <p className="text-zinc-700 dark:text-zinc-300 text-xl">
           I'm a senior at the University of Michigan studying Computer Science and Business with a passion for AI/ML, product-building, and creative problem-solving. I love turning ideas into real, impactful projects—especially at the intersection of technology, design, and innovation. Driven by curiosity and a builder's mindset, I'm always exploring new tools, startups, and ways to make tech more human.
         </p>
-      </div>
-      <div className="p-4 max-w-5xl mx-auto mt-20 text-center">
-        <h2 className="text-4xl font-bold mb-4 mx-auto">Tech Stack</h2>
-        <p className="text-zinc-300 mb-8">I love working with a variety of technologies to build innovative solutions.</p>
+      </section>
+      <section aria-labelledby="techstack-heading" className="p-4 max-w-5xl mx-auto mt-20 text-center">
+        <h2 id="techstack-heading" className="text-4xl font-bold mb-4 mx-auto">Tech Stack</h2>
+        <p className="text-zinc-700 dark:text-zinc-300 mb-8">I love working with a variety of technologies to build innovative solutions.</p>
         <div className='flex flex-wrap justify-center gap-4 text-sm'>
           <button className='techstackbutton'>
             <SiPython className='text-xl' />
@@ -125,7 +128,7 @@ export default function Home() {
             Lightroom
           </button>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { SlClose, SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { motion } from "framer-motion";
 import { Spinner, ErrorState } from "../components/LoadingState";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const thumbModules = import.meta.glob('../assets/images/*.jpg', {
   eager: true,
@@ -26,6 +27,7 @@ const thumbs = byFilename(thumbModules);
 const larges = byFilename(largeModules);
 
 export default function Photography() {
+  useDocumentTitle('Photography');
   const [allPhotos, setAllPhotos] = useState([]);
   const [selectedCollection, setSelectedCollection] = useState("all");
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -72,7 +74,7 @@ export default function Photography() {
       <div className="w-full flex flex-col items-center gap-4 mb-6 text-center">
         <div>
           <h1 className="text-4xl font-bold">Gallery</h1>
-          <p className="text-zinc-400 text-lg">A selection of my photos</p>
+          <p className="text-zinc-600 dark:text-zinc-400 text-lg">A selection of my photos</p>
         </div>
         <div className="flex gap-2 flex-wrap justify-center">
           {collections.map((col) => (
@@ -81,7 +83,7 @@ export default function Photography() {
               className={`capitalize px-4 py-1 rounded-full border transition ${
                 selectedCollection === col
                   ? "bg-violet-500 text-white border-violet-500"
-                  : "bg-zinc-800 text-zinc-200 border-zinc-600 hover:bg-zinc-700"
+                  : "bg-zinc-100 text-zinc-700 border-zinc-300 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:border-zinc-600 dark:hover:bg-zinc-700"
               }`}
               onClick={() => setSelectedCollection(col)}
             >
@@ -123,7 +125,8 @@ export default function Photography() {
           </button>
           <button
             onClick={showPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-300 hover:bg-zinc-800/50 hover:text-white rounded-full py-3 pr-4 pl-2 transition"
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-300 hover:bg-zinc-800/50 hover:text-white rounded-full py-3 pr-4 pl-2 transition disabled:opacity-30"
+            aria-label="Previous photo"
             disabled={selectedIndex === 0}
           >
             <SlArrowLeft size={40} />
@@ -135,7 +138,8 @@ export default function Photography() {
           />
           <button
             onClick={showNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-300 hover:bg-zinc-800/50 hover:text-white rounded-full py-3 pl-4 pr-2 transition"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-300 hover:bg-zinc-800/50 hover:text-white rounded-full py-3 pl-4 pr-2 transition disabled:opacity-30"
+            aria-label="Next photo"
             disabled={selectedIndex === photos.length - 1}
           >
             <SlArrowRight size={40} />

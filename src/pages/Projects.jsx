@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion';
 import { LoadingState, ErrorState } from '../components/LoadingState';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export default function Projects() {
+  useDocumentTitle('Projects');
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -28,11 +30,12 @@ export default function Projects() {
   if (error) return <ErrorState message={`Error loading projects: ${error}`} />;
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-6">
+    <section aria-labelledby="projects-heading" className="max-w-7xl mx-auto px-6 py-6">
+      <h1 id="projects-heading" className="text-4xl font-bold mb-6 text-center">Projects</h1>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, idx) => {
           return (
-            <motion.div 
+            <motion.article
               className='flex flex-col h-full' key={idx}
               initial={{ opacity: 0, scale: 0.98, y: 40 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -46,10 +49,10 @@ export default function Projects() {
                 tools={project.tools}
                 url={project.url}
               />
-            </motion.div>
+            </motion.article>
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }
