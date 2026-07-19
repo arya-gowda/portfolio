@@ -6,11 +6,8 @@ import Experience from './pages/Experience';
 import Photography from './pages/Photography';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <Router>
       <div className='w-full min-h-screen flex flex-col'>

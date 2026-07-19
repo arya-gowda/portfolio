@@ -17,7 +17,7 @@
   },
   {
     "title": "Portfolio Website",
-    "description": "This site lol",
+    "description": "This personal portfolio site, built to showcase my projects, experience, and photography with a fast, responsive UI.",
     "image": "projects/Portfolio.png",
     "tools": ["ReactJS", "Tailwind CSS", "Vite"],
     "url": "https://github.com/arya-gowda/portfolio"
