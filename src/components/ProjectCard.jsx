@@ -1,10 +1,11 @@
 import { FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 export default function ProjectCard({ title, description, image, tools, url }) {
   return (
-    <div className="bg-white dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-600 h-full rounded-3xl shadow-md hover:scale-103 transition-transform hover:shadow-lg duration-300">
-      <img src={image} alt={title} loading="lazy" className=" h-40 w-full object-cover rounded-t-3xl" />
+    <div className="group bg-white dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-600 h-full rounded-3xl shadow-md overflow-hidden hover:-translate-y-1 hover:border-violet-400 dark:hover:border-violet-400 hover:shadow-xl transition-all duration-300 ease-out">
+      <div className="h-40 w-full overflow-hidden">
+        <img src={image} alt={title} loading="lazy" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out" />
+      </div>
       <div className="p-4">
         <div className='flex w-full justify-between'>
           <h3 className="text-xl font-bold mb-1">{title}</h3>

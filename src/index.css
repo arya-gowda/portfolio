@@ -31,6 +31,7 @@ body {
 
 .techstackbutton {
   display: flex;
+  align-items: center;
   border-color: var(--color-violet-500, #7c3aed);
   border-width: 2px;
   color: var(--color-violet-700, #6d28d9);
@@ -38,10 +39,21 @@ body {
   padding-block: calc(var(--spacing) * 2) /* 0.5rem = 8px */;
   border-radius: calc(infinity * 1px);
   gap: calc(var(--spacing) * 2) /* 0.5rem = 8px */;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 .dark .techstackbutton {
   border-color: var(--color-violet-400, #646cff);
   color: var(--color-violet-200, #b0b0ff);
+}
+.techstackbutton:hover {
+  background-color: var(--color-violet-500, #7c3aed);
+  color: var(--color-zinc-50, #fafafa);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--color-violet-500, #7c3aed) 35%, transparent);
+}
+.dark .techstackbutton:hover {
+  background-color: var(--color-violet-400, #646cff);
+  color: var(--color-zinc-900, #111111);
 }
 
 .navlink {

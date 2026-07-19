@@ -28,11 +28,11 @@ Since this site's real purpose is to be seen by recruiters/hiring managers/colla
 
 ## Tier 3 — Nice-to-Have / Polish
 
-- [ ] **Route-based code splitting** via `React.lazy` in `src/App.jsx` to shrink the initial bundle (currently all pages are statically imported together).
-- [ ] **JSON-LD structured data** (Person schema) in `index.html` for richer search results.
-- [ ] **Optimize remaining `public/projects/*` images** (`Aevum_StadiumTurf.jpeg` 1.1MB, `Portfolio.png` 1MB) — move into `src/assets` and run them through the existing `vite-imagetools` pipeline already used for the Photography gallery, rather than serving raw from `public/`.
-- [ ] **Micro-interaction polish:** hover/transition refinement on project cards and the tech-stack pill grid on Home.
-- [ ] **Repo hygiene:** consider whether the 53MB of raw source photos in `src/assets/images/` needs to stay in the main repo history long-term (e.g. Git LFS) given it only exists to feed the imagetools pipeline.
+- [x] **Route-based code splitting** via `React.lazy` in `src/App.jsx` to shrink the initial bundle (currently all pages are statically imported together). *(Done — each page is now a separate chunk, confirmed via build output.)*
+- [x] **JSON-LD structured data** (Person schema) in `index.html` for richer search results. *(Done.)*
+- [x] **Optimize remaining `public/projects/*` images** (`Aevum_StadiumTurf.jpeg` 1.1MB, `Portfolio.png` 1MB) — move into `src/assets` and run them through the existing `vite-imagetools` pipeline already used for the Photography gallery, rather than serving raw from `public/`. *(Done: 1.1MB→74.5KB and 1MB→10.5KB webp.)*
+- [x] **Micro-interaction polish:** hover/transition refinement on project cards and the tech-stack pill grid on Home. *(Done — verified real `:hover` triggers via simulated input, not just code review.)*
+- [x] **Repo hygiene reviewed (action pending a decision):** `.git` is ~745MB vs. a 53MB working-tree images folder — old, larger versions of the same photos (some 15–28MB each) are still sitting in history from before they were replaced with smaller versions. No individual blob exceeds GitHub's 100MB hard limit, so nothing is currently blocked, but clones/fetches are needlessly slow. Fixing this properly means either rewriting git history (`git filter-repo`/BFG) or migrating to Git LFS — both are disruptive (force-push, one-time re-clone for any collaborators) so this needs Arya's explicit go-ahead rather than being done automatically.
 
 ## Verification
 

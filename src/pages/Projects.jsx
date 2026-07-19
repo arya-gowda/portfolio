@@ -4,6 +4,21 @@ import { motion } from 'framer-motion';
 import { LoadingState, ErrorState } from '../components/LoadingState';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
+const optimizedImageModules = import.meta.glob('../assets/projects/*.{jpg,jpeg,png}', {
+  eager: true,
+  import: 'default',
+  query: { w: '600', format: 'webp', quality: '80' },
+});
+
+const optimizedImages = Object.fromEntries(
+  Object.entries(optimizedImageModules).map(([path, src]) => [path.split('/').pop(), src])
+);
+
+function resolveProjectImage(image) {
+  const filename = image.split('/').pop();
+  return optimizedImages[filename] || `/${image}`;
+}
+
 export default function Projects() {
   useDocumentTitle('Projects');
   const [projects, setProjects] = useState([]);
@@ -45,7 +60,7 @@ export default function Projects() {
               <ProjectCard
                 title={project.title}
                 description={project.description}
-                image={project.image}
+                image={resolveProjectImage(project.image)}
                 tools={project.tools}
                 url={project.url}
               />
